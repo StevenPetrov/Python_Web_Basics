@@ -1,0 +1,33 @@
+{% load static %}
+{% load filters %}
+{% load tags %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'site.css' %}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+HTML NAV
+<nav>
+
+    <a href="{% url 'index'%}"> HOME</a>
+    <a href="{% url 'redirect to home'%}"> REDIRECT TO HOME</a>
+</nav>
+
+Tag nav:
+{% app_nav 'index' 'home' 'about' %}
+
+
+{% block page_content %}
+{% endblock %}
+
+
+{% include 'partials/fiooter.html' %}
+
+</body>
+
+</html>
